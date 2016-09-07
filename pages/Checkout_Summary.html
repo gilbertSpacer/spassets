@@ -1,0 +1,49 @@
+<h1>Reserve your Space</h1>
+<h2>{{ @order.total_units_text | titleize }}</h2>
+{% if @order.action_hourly_booking? %}
+<p>{{ @order.hourly_summary }}</p>
+{% else %}
+<div class='selected-dates-summary'>
+<hr class='thin'>
+{{ @order.dates_summary_with_hr }}</div>
+{% endif %}
+<hr class='thin'>
+{% if @order.included_tax? %} {% endif %} {% if
+@order.additional_tax? %} {% endif %} {% for item in
+@order.line_items %} {% if @order.included_tax? %} {% endif %} {%
+if @order.additional_tax? %} {% endif %} {% endfor %}
+<table class="payment-summary">
+<thead>
+<tr>
+<th scope="col">Item</th>
+<th scope="col">Net</th>
+<th scope="col">Tax</th>
+<th scope="col">Price</th>
+<th scope="col">Tax</th>
+<th scope="col">Gross</th>
+<th scope="col">Qty</th>
+<th scope="col">Total</th>
+</tr>
+</thead>
+<tfoot>
+<tr>
+<td colspan=
+"{% if @order.included_tax? || @order.additional_tax? %}4{% else %}2{% endif %}">
+</td>
+<th headers="summary-total">Total</th>
+<td id="summary-total">{{ @order.formatted_total_amount }}</td>
+</tr>
+</tfoot>
+<tbody>
+<tr data-line-item-class="{{ item.class_name }}">
+<td>{{ item.name }}</td>
+<td>{{ item.formatted_net_price }}</td>
+<td>{{ item.included_tax_total_rate }}%</td>
+<td>{{ item.formatted_unit_price }}</td>
+<td>{{ item.additional_tax_total_rate }}%</td>
+<td>{{ item.formatted_gross_price }}</td>
+<td>{{ item.quantity }}</td>
+<td>{{ item.formatted_total_price }}</td>
+</tr>
+</tbody>
+</table>

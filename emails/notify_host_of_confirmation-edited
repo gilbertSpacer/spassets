@@ -1,0 +1,30 @@
+<h2>Good news {{ user.first_name }}!</h2>
+<p>Your Space, <a href="{{%20listing.listing_url%20}}">{{
+listing.name }}</a>, has been booked by <a href=
+"{{%20platform_context.host%20|%20append:reservation.owner.user_profile_url%20}}">
+{{ reservation.owner.first_name }}</a>. The advertised price of
+your space is {{ reservation.total_payable_to_host_formatted }}.
+The Renter would like to move in on {{ reservation.dates_summary }}
+and are looking to store '{{
+reservation.properties.what_will_you_be_storing?_ }}'. {{
+reservation.owner.first_name }} expects to need your space for {{
+reservation.properties.how_long_do_you_need_the_space? }} and would
+like access {{
+reservation.properties.how_often_will_you_be_visiting?}}</p>
+<p>If you haven't spoken with the Renter yet, <a href=
+"{{%20platform_context.host%20|%20append:listing.manage_guests_dashboard_url%20}}">
+click here</a>.</p>
+<p>Otherwise, please confirm the booking and let's get the Renter
+set up!</p>
+<a class="btn" href=
+"{{%20platform_context.host%20|%20append:reservation.reservation_confirm_url_with_tracking%20|%20append:signature_for_tracking%20}}">Confirm
+Booking</a>
+<p>Respond to questions and reservations within 2-3 hours through
+your Spacer inbox or SMS. Rental requests expire after 48 hours,
+and renters typically move on if they do not receive a response
+within 12 hours.</p>
+<p>If you need help, send an email to <a href=
+"mailto:support@spacer.com.au">support@spacer.com.au</a> or phone
+1300 500 538.</p>
+<p>Cheers,<br>
+The Spacer Team</p>

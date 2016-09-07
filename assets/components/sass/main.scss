@@ -1,6 +1,9 @@
 // reservations CSS
 [data-form-component-name="your-storage-details"] {
       overflow: hidden !important;
+  .col-md-4:nth-child(5) {
+    display: none;
+  }
   .customSelectInner {
         width: 100% !important;
         min-width: 401px;

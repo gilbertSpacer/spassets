@@ -6,6 +6,10 @@
   min-width: 401px;
 }
 
+[data-line-item-class="ServiceFee"] {
+  display: none;
+}
+
 .content-wrapper .footer-push {
   height: 0 !important;
 }

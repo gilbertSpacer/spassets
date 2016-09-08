@@ -18,12 +18,6 @@
 
 //For User profile-content
 .profile-content {
-  #general {
-    #services {
-      display: none;
-    }
-  }
-
   .nav-stacked {
     // Hide services tab
     a[href="#services"] {
@@ -37,4 +31,9 @@
          position: relative;
      }
   }
+}
+.registrations  {
+    #services {
+      display: none;
+    }
 }

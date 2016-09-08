@@ -15,3 +15,13 @@
 .content-wrapper .footer-push {
     height: 0 !important;
 }
+
+//For User profile-content
+.profile-content {
+  .nav-stacked {
+    // Hide services tab
+    a[href="#services"] {
+        display: none !important;
+    }
+  }
+}

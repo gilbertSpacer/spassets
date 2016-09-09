@@ -42,3 +42,15 @@ body.buy-sell-theme {
     min-height: 497px;
   }
 }
+
+//will make footer image and hearo image full width
+.row-fluid {
+  .offset2:first-child {
+    margin-left: 0;
+  }
+}
+.row-fluid {
+  .span8 {
+   width: 100%;
+ }
+}

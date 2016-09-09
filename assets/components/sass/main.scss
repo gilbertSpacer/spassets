@@ -43,14 +43,18 @@ body.buy-sell-theme {
   }
 }
 
-//will make footer image and hearo image full width
+.footer-wrapper {
+    position: relative !important;
+}
+
+//will make footer image and hero image full width
 .row-fluid {
   .offset2:first-child {
-    margin-left: 0;
+    margin-left: 0 !important;
   }
 }
 .row-fluid {
   .span8 {
-   width: 100%;
+   width: 100% !important;
  }
 }

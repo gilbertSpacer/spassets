@@ -24,7 +24,6 @@ $(document).ready(function() {
       $(target_tab_selector).addClass('active');
   });
 
-
   //added condition to user profile
   if($('#general').hasClass('active')){
   //  will not show services and reviews if genetal tab is active
